@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<MethodSetup Method="PyKeras::PyKeras">
+  <GeneralInfo>
+    <Info name="TMVA Release" value="4.2.1 [262657]"/>
+    <Info name="ROOT Release" value="6.12/07 [396295]"/>
+    <Info name="Creator" value="bolivars"/>
+    <Info name="Date" value="Wed May 18 19:18:04 2022"/>
+    <Info name="Host" value="Linux cmsbuild90.cern.ch 2.6.32-696.30.1.el6.x86_64 #1 SMP Tue May 22 06:09:36 CEST 2018 x86_64 x86_64 x86_64 GNU/Linux"/>
+    <Info name="Dir" value="/gpfs/users/bolivars/CMSSW_10_4_0/src/TopPlusDMRunIILegacy/neuralNetwork/2016/DMscalar_Dilepton_top_tWChan_Mchi1_Mphi50_TTbar"/>
+    <Info name="Training events" value="173046"/>
+    <Info name="TrainingTime" value="8.99362299e+01"/>
+    <Info name="AnalysisType" value="Classification"/>
+  </GeneralInfo>
+  <Options>
+    <Option name="V" modified="Yes">False</Option>
+    <Option name="VerbosityLevel" modified="No">Default</Option>
+    <Option name="VarTransform" modified="Yes">N</Option>
+    <Option name="H" modified="Yes">True</Option>
+    <Option name="CreateMVAPdfs" modified="No">False</Option>
+    <Option name="IgnoreNegWeightsInTraining" modified="No">False</Option>
+    <Option name="FilenameModel" modified="Yes">/gpfs/users/bolivars/CMSSW_10_4_0/src/TopPlusDMRunIILegacy/neuralNetwork//2016/DMscalar_Dilepton_top_tWChan_Mchi1_Mphi50_TTbar/training/PyKeras1.h5</Option>
+    <Option name="FilenameTrainedModel" modified="Yes">/gpfs/users/bolivars/CMSSW_10_4_0/src/TopPlusDMRunIILegacy/neuralNetwork//2016/DMscalar_Dilepton_top_tWChan_Mchi1_Mphi50_TTbar/training/PyKerasTrained1.h5</Option>
+    <Option name="BatchSize" modified="Yes">250</Option>
+    <Option name="NumEpochs" modified="Yes">50</Option>
+    <Option name="Verbose" modified="No">1</Option>
+    <Option name="ContinueTraining" modified="No">False</Option>
+    <Option name="SaveBestOnly" modified="No">True</Option>
+    <Option name="TriesEarlyStopping" modified="No">-1</Option>
+    <Option name="LearningRateSchedule" modified="No"/>
+  </Options>
+  <Variables NVar="14">
+    <Variable VarIndex="0" Expression="nbJet" Label="nbJet" Title="nbJet" Unit="" Internal="nbJet" Type="F" Min="1.00000000e+00" Max="5.00000000e+00"/>
+    <Variable VarIndex="1" Expression="mblt" Label="mblt" Title="mblt" Unit="" Internal="mblt" Type="F" Min="1.39588232e+01" Max="1.07499353e+03"/>
+    <Variable VarIndex="2" Expression="METcorrected_pt" Label="METcorrected_pt" Title="METcorrected_pt" Unit="" Internal="METcorrected_pt" Type="F" Min="2.37417388e+00" Max="2.96671460e+03"/>
+    <Variable VarIndex="3" Expression="mt2ll" Label="mt2ll" Title="mt2ll" Unit="" Internal="mt2ll" Type="F" Min="8.00000305e+01" Max="7.32169739e+02"/>
+    <Variable VarIndex="4" Expression="dphillmet" Label="dphillmet" Title="dphillmet" Unit="" Internal="dphillmet" Type="F" Min="-3.14158869e+00" Max="3.14158869e+00"/>
+    <Variable VarIndex="5" Expression="mt2bl" Label="mt2bl" Title="mt2bl" Unit="" Internal="mt2bl" Type="F" Min="7.71987534e+01" Max="2.91649048e+03"/>
+    <Variable VarIndex="6" Expression="massT" Label="massT" Title="massT" Unit="" Internal="massT" Type="F" Min="1.37437851e+02" Max="2.48272412e+03"/>
+    <Variable VarIndex="7" Expression="cosphill" Label="cosphill" Title="cosphill" Unit="" Internal="cosphill" Type="F" Min="-9.90000000e+01" Max="9.99983609e-01"/>
+    <Variable VarIndex="8" Expression="costhetall" Label="costhetall" Title="costhetall" Unit="" Internal="costhetall" Type="F" Min="-9.90000000e+01" Max="9.63803947e-01"/>
+    <Variable VarIndex="9" Expression="r2l" Label="r2l" Title="r2l" Unit="" Internal="r2l" Type="F" Min="1.01367906e-02" Max="1.46966534e+01"/>
+    <Variable VarIndex="10" Expression="r2l4j" Label="r2l4j" Title="r2l4j" Unit="" Internal="r2l4j" Type="F" Min="3.85772181e-03" Max="7.93056154e+00"/>
+    <Variable VarIndex="11" Expression="reco_weight" Label="reco_weight" Title="reco_weight" Unit="" Internal="reco_weight" Type="F" Min="-9.90000000e+01" Max="6.28347492e+00"/>
+    <Variable VarIndex="12" Expression="dark_pt" Label="dark_pt" Title="dark_pt" Unit="" Internal="dark_pt" Type="F" Min="-9.90000000e+01" Max="9.07732715e+03"/>
+    <Variable VarIndex="13" Expression="overlapping_factor" Label="overlapping_factor" Title="overlapping_factor" Unit="" Internal="overlapping_factor" Type="F" Min="-9.90000000e+01" Max="8.55416794e+01"/>
+  </Variables>
+  <Spectators NSpec="0"/>
+  <Classes NClass="2">
+    <Class Name="Signal" Index="0"/>
+    <Class Name="Background" Index="1"/>
+  </Classes>
+  <Transformations NTransformations="1">
+    <Transform Name="Normalize">
+      <Selection>
+        <Input NInputs="14">
+          <Input Type="Variable" Label="nbJet" Expression="nbJet"/>
+          <Input Type="Variable" Label="mblt" Expression="mblt"/>
+          <Input Type="Variable" Label="METcorrected_pt" Expression="METcorrected_pt"/>
+          <Input Type="Variable" Label="mt2ll" Expression="mt2ll"/>
+          <Input Type="Variable" Label="dphillmet" Expression="dphillmet"/>
+          <Input Type="Variable" Label="mt2bl" Expression="mt2bl"/>
+          <Input Type="Variable" Label="massT" Expression="massT"/>
+          <Input Type="Variable" Label="cosphill" Expression="cosphill"/>
+          <Input Type="Variable" Label="costhetall" Expression="costhetall"/>
+          <Input Type="Variable" Label="r2l" Expression="r2l"/>
+          <Input Type="Variable" Label="r2l4j" Expression="r2l4j"/>
+          <Input Type="Variable" Label="reco_weight" Expression="reco_weight"/>
+          <Input Type="Variable" Label="dark_pt" Expression="dark_pt"/>
+          <Input Type="Variable" Label="overlapping_factor" Expression="overlapping_factor"/>
+        </Input>
+        <Output NOutputs="14">
+          <Output Type="Variable" Label="nbJet" Expression="nbJet"/>
+          <Output Type="Variable" Label="mblt" Expression="mblt"/>
+          <Output Type="Variable" Label="METcorrected_pt" Expression="METcorrected_pt"/>
+          <Output Type="Variable" Label="mt2ll" Expression="mt2ll"/>
+          <Output Type="Variable" Label="dphillmet" Expression="dphillmet"/>
+          <Output Type="Variable" Label="mt2bl" Expression="mt2bl"/>
+          <Output Type="Variable" Label="massT" Expression="massT"/>
+          <Output Type="Variable" Label="cosphill" Expression="cosphill"/>
+          <Output Type="Variable" Label="costhetall" Expression="costhetall"/>
+          <Output Type="Variable" Label="r2l" Expression="r2l"/>
+          <Output Type="Variable" Label="r2l4j" Expression="r2l4j"/>
+          <Output Type="Variable" Label="reco_weight" Expression="reco_weight"/>
+          <Output Type="Variable" Label="dark_pt" Expression="dark_pt"/>
+          <Output Type="Variable" Label="overlapping_factor" Expression="overlapping_factor"/>
+        </Output>
+      </Selection>
+      <Class ClassIndex="0">
+        <Ranges>
+          <Range Index="0" Min="1.0000000000000000e+00" Max="4.0000000000000000e+00"/>
+          <Range Index="1" Min="2.0826953887939453e+01" Max="7.0471221923828125e+02"/>
+          <Range Index="2" Min="4.1662590026855469e+01" Max="1.2715133056640625e+03"/>
+          <Range Index="3" Min="8.0016220092773438e+01" Max="7.3216973876953125e+02"/>
+          <Range Index="4" Min="-3.1415543556213379e+00" Max="3.1415655612945557e+00"/>
+          <Range Index="5" Min="1.0861103820800781e+02" Max="2.9164904785156250e+03"/>
+          <Range Index="6" Min="2.4472662353515625e+02" Max="2.4827241210937500e+03"/>
+          <Range Index="7" Min="-9.9000000000000000e+01" Max="9.9998348951339722e-01"/>
+          <Range Index="8" Min="-9.9000000000000000e+01" Max="9.5203000307083130e-01"/>
+          <Range Index="9" Min="9.9555082619190216e-02" Max="1.4696653366088867e+01"/>
+          <Range Index="10" Min="5.0149712711572647e-02" Max="1.5490380525588989e+00"/>
+          <Range Index="11" Min="-9.9000000000000000e+01" Max="6.2541365623474121e+00"/>
+          <Range Index="12" Min="-9.9000000000000000e+01" Max="4.8112172851562500e+03"/>
+          <Range Index="13" Min="-9.9000000000000000e+01" Max="1.3925897598266602e+01"/>
+        </Ranges>
+      </Class>
+      <Class ClassIndex="1">
+        <Ranges>
+          <Range Index="0" Min="1.0000000000000000e+00" Max="5.0000000000000000e+00"/>
+          <Range Index="1" Min="1.3958823204040527e+01" Max="1.0749935302734375e+03"/>
+          <Range Index="2" Min="2.3741738796234131e+00" Max="2.9667145996093750e+03"/>
+          <Range Index="3" Min="8.0000030517578125e+01" Max="4.3476770019531250e+02"/>
+          <Range Index="4" Min="-3.1415886878967285e+00" Max="3.1415886878967285e+00"/>
+          <Range Index="5" Min="7.7198753356933594e+01" Max="2.5286779785156250e+03"/>
+          <Range Index="6" Min="1.3743785095214844e+02" Max="2.1217629394531250e+03"/>
+          <Range Index="7" Min="-9.9000000000000000e+01" Max="9.9998360872268677e-01"/>
+          <Range Index="8" Min="-9.9000000000000000e+01" Max="9.6380394697189331e-01"/>
+          <Range Index="9" Min="1.0136790573596954e-02" Max="1.3341287612915039e+01"/>
+          <Range Index="10" Min="3.8577218074351549e-03" Max="7.9305615425109863e+00"/>
+          <Range Index="11" Min="-9.9000000000000000e+01" Max="6.2834749221801758e+00"/>
+          <Range Index="12" Min="-9.9000000000000000e+01" Max="9.0773271484375000e+03"/>
+          <Range Index="13" Min="-9.9000000000000000e+01" Max="8.5541679382324219e+01"/>
+        </Ranges>
+      </Class>
+      <Class ClassIndex="2">
+        <Ranges>
+          <Range Index="0" Min="1.0000000000000000e+00" Max="5.0000000000000000e+00"/>
+          <Range Index="1" Min="1.3958823204040527e+01" Max="1.0749935302734375e+03"/>
+          <Range Index="2" Min="2.3741738796234131e+00" Max="2.9667145996093750e+03"/>
+          <Range Index="3" Min="8.0000030517578125e+01" Max="7.3216973876953125e+02"/>
+          <Range Index="4" Min="-3.1415886878967285e+00" Max="3.1415886878967285e+00"/>
+          <Range Index="5" Min="7.7198753356933594e+01" Max="2.9164904785156250e+03"/>
+          <Range Index="6" Min="1.3743785095214844e+02" Max="2.4827241210937500e+03"/>
+          <Range Index="7" Min="-9.9000000000000000e+01" Max="9.9998360872268677e-01"/>
+          <Range Index="8" Min="-9.9000000000000000e+01" Max="9.6380394697189331e-01"/>
+          <Range Index="9" Min="1.0136790573596954e-02" Max="1.4696653366088867e+01"/>
+          <Range Index="10" Min="3.8577218074351549e-03" Max="7.9305615425109863e+00"/>
+          <Range Index="11" Min="-9.9000000000000000e+01" Max="6.2834749221801758e+00"/>
+          <Range Index="12" Min="-9.9000000000000000e+01" Max="9.0773271484375000e+03"/>
+          <Range Index="13" Min="-9.9000000000000000e+01" Max="8.5541679382324219e+01"/>
+        </Ranges>
+      </Class>
+    </Transform>
+  </Transformations>
+  <MVAPdfs/>
+</MethodSetup>

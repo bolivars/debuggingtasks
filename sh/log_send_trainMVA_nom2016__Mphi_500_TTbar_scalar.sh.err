@@ -1,0 +1,52 @@
+Using TensorFlow backend.
+2022-05-18 19:03:26.441593: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+0%, time left: unknown
+6%, time left: 63 sec
+13%, time left: 57 sec
+19%, time left: 52 sec
+25%, time left: 48 sec
+32%, time left: 43 sec
+38%, time left: 39 sec
+44%, time left: 35 sec
+50%, time left: 31 sec
+56%, time left: 27 sec
+63%, time left: 23 sec
+69%, time left: 19 sec
+75%, time left: 15 sec
+82%, time left: 11 sec
+88%, time left: 7 sec
+94%, time left: 3 sec
+0%, time left: unknown
+6%, time left: 5 sec
+12%, time left: 5 sec
+18%, time left: 4 sec
+25%, time left: 4 sec
+31%, time left: 4 sec
+37%, time left: 3 sec
+43%, time left: 3 sec
+50%, time left: 2 sec
+56%, time left: 2 sec
+62%, time left: 2 sec
+68%, time left: 1 sec
+75%, time left: 1 sec
+81%, time left: 1 sec
+87%, time left: 0 sec
+93%, time left: 0 sec
+/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-Keras/2.1.4-ikaegh/lib/python2.7/site-packages/keras/models.py:942: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+0%, time left: unknown
+6%, time left: 1 sec
+12%, time left: 1 sec
+18%, time left: 1 sec
+25%, time left: 1 sec
+31%, time left: 1 sec
+37%, time left: 1 sec
+43%, time left: 1 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+93%, time left: 0 sec
